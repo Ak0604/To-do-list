@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>To-Do List</h1>
+        <input type="text" id="new-task" placeholder="Add a new task">
+        <button onclick="addTask()">Add</button>
+        <ul id="task-list"></ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+
+<style>/* styles.css */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    #app {
+        background: #ffffff;
+        padding: 20px 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 24px;
+        color: #343a40;
+        margin-bottom: 20px;
+    }
+    
+    input[type="text"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ced4da;
+        border-radius: 8px;
+        outline: none;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+    
+    button {
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    li {
+        background-color: #f8f9fa;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    li.completed {
+        text-decoration: line-through;
+        color: #6c757d;
+    }
+    
+    li button {
+        background: none;
+        border: none;
+        color: #dc3545;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 0;
+        margin-left: 10px;
+        transition: color 0.3s ease;
+    }
+    
+    li button:hover {
+        color: #c82333;
+    }
+    </style>
